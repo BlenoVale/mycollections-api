@@ -16,6 +16,13 @@ router.get('/ping', (req: Request, res: Response) => {
  * AuthValidator.singup - validação dos campos do form
  * AuthController.singup - método de cadastro de usuários
  */
-router.post('/user/signup', AuthValidator.singup, AuthController.singup);
+router.post('/user/signup', AuthValidator.signup, AuthController.signup);
+
+/**
+ * /user/signin - endpoint
+ * AuthValidator.sigin - validação dos campos do form
+ * AuthController.signin - método de cadastro de usuários
+ */
+router.post('/user/signin', AuthValidator.signin, AuthController.signin);
 
 export default router;
